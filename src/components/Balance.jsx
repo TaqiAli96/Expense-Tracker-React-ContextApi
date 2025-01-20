@@ -6,7 +6,7 @@ export const Balance = () => {
   const { transactions } = useContext(GlobalContext);
   const amount = transactions.map((transaction) => transaction.amount);
   const total = amount.reduce((acc, elem) => acc + elem, 0).toFixed(2);
-  // console.log(total);
+  console.log(total);
   return (
     <VStack>
       <Text>Your Balance</Text>
