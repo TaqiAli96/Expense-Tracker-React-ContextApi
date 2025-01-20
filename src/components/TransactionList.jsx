@@ -7,13 +7,12 @@ const Transaction = (transaction) => {
 
   const { deleteTransaction } = context;
   const sign = transaction.amount > 0 ? "+" : "_";
+  const border = transaction.amount > 0 ? "2px solid green" : "2px solid red"
   return (
     <HStack>
       <Text>{transaction.text}</Text>
       <Text
-        borderRight={
-          transaction.amount > 0 ? "2px solid green" : "2px solid red"
-        }
+        borderRight={ border }
       >
         {sign} $ {Math.abs(transaction.amount)}
       </Text>
