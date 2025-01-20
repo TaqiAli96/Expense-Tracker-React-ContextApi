@@ -16,12 +16,7 @@ export const GlobalProvider = ({ children }) => {
     });
   };
 
-  const Transaction = (transaction) => {
-    dispatch({
-      type: "ADD_TRANSACTION",
-      payload: transaction,
-    });
-  };
+
   const addTransaction = (transaction) => {
     dispatch({
       type: "ADD_TRANSACTION",
